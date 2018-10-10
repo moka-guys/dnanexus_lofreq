@@ -17,9 +17,8 @@ Parameters (default)
 - advanced options (optional) - A string containing further command line arguments that can be parsed to lofreq
 
 ## How does this app work?
-1. The reference genome is downloaded and indexed using samtools (v1.2)
-2. The app uses sambamba (v0.5.4) to index the BAM file.
-3. To utilise multiple processors this app runs 'lofreq call-parallel' (lofreq v2.1.2), parsing the bedfile and --call-indels parameters. 
+1. The app uses sambamba (v0.5.4) to index the BAM file.
+2. To utilise multiple processors this app runs 'lofreq call-parallel' (lofreq v2.1.2), adding the bedfile,--call-indels parameter and any advanced options to the command as required. 
 
 For more information, consult the [LoFreq website](http://csb5.github.io/lofreq/)
 
