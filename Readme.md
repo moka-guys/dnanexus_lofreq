@@ -10,7 +10,7 @@ Use this app to robustly call low-frequency variants in next-generation sequenci
 This app requires:
 - Coordinate-sorted mappings in BAM format (`*.bam`). It is strongly suggested that the BAM file has undergone GATK indel realignment and base quality score recalibration.
 - Reference genome sequence in gzipped fasta format (`*.fasta.gz`, `*.fa.gz`)
-- Bed file (optional)
+- Bed file (optional). If provided, ensure there are no overlapping regions as any variants found within multiple regions will be called multiple times.
 
 Parameters (default)
 - --call-indels (True) - to call indels 
