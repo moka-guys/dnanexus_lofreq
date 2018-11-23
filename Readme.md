@@ -9,12 +9,14 @@ Use this app to robustly call low-frequency variants in next-generation sequenci
 ## What data are required for this app to run?
 This app requires:
 - Coordinate-sorted mappings in BAM format (`*.bam`). It is strongly suggested that the BAM file has undergone GATK indel realignment and base quality score recalibration.
-- Reference genome sequence in gzipped fasta format (`*.fasta.gz`, `*.fa.gz`)
+- Reference genome sequence (build 37) in gzipped fasta format (`*.fasta.gz`, `*.fa.gz`)
 - Bed file (optional). If provided, ensure there are no overlapping regions as any variants found within multiple regions will be called multiple times.
 
 Parameters (default)
 - --call-indels (True) - to call indels 
 - advanced options (optional) - A string containing further command line arguments that can be parsed to lofreq
+
+NB this app currently supports build 37 only.
 
 ## How does this app work?
 LoFreq has some preset defaults to filter variants. These filters revolve around variant qualities (which are converted p-values) which are (by default) based on Bonferroni correction and a significance threshold of 0.01.

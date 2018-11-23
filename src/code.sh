@@ -45,7 +45,7 @@ if [[ "$call_indels" == true ]]; then
 fi
 
 # check if bedfile is provided and add to command
-if [ "$bedfile" != "" ]; then
+if [[ "$bedfile" != "" ]]; then
   opts="$opts --bed $bedfile_path "
 fi
 
